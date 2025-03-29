@@ -7,24 +7,45 @@
     --green-default: hsl(75, 94%, 57%);
     --white-default: hsl(0, 0%, 100%);
     --font-size-default: 14px;
+    --font-family-default: 'Inter', sans-serif;
 
 }
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-default);
     background-color: var(--grey-900);
     color: var(--white-default);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+h1 {
+    margin-top: 15px;
+    margin-bottom: 0;
     padding: 0;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 p {
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
+}
+
+div.container > p:first-of-type {
+   color: var(--green-default);
+   font-weight: 600;;
+}
+
+div.container > p:last-of-type {
+   color: var(--white-default);
+   font-weight: 400;
+   filter: brightness(0.8);
 }
 
 a {
@@ -33,26 +54,57 @@ a {
 }
 
 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+li {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
-    width: 90%;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-800);
     margin: 0 auto;
+    padding: 25px 35px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.social-links {
+    width: 100%;
+    margin: 15px 0;
+}
+
+img {
+    border-radius: 100%;
+    height: auto;
+    width: 75px;
+    padding: 10px 0;
+    
 }
 
 button {
     cursor: pointer;
     border: none;
-    padding: 10px 15px;
-    background-color: #007BFF;
+    padding: 12px 0;
+    background-color: var(--grey-700);
     color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.75px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--green-default);
+    color: var(--grey-900);
 }
